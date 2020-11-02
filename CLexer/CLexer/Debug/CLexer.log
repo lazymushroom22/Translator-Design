@@ -2,8 +2,7 @@
   lex.yy.c
 c.lex(16,10): warning C4013: 'comment' undefined; assuming extern returning int
 c.lex(51,29): warning C4013: 'check_type' undefined; assuming extern returning int
-lex.yy.c(1933,46): warning C4013: 'isatty' undefined; assuming extern returning int
+lex.yy.c(1939,46): warning C4013: 'isatty' undefined; assuming extern returning int
   Generating Code...
-C:\Users\Andrei\source\repos\CLexer\CLexer\c.lex(138): warning C4716: 'comment': must return a value
-C:\Users\Andrei\source\repos\CLexer\CLexer\c.lex(175): warning C4716: 'check_type': must return a value
+C:\Users\Andrei\source\repos\CLexer\CLexer\c.lex(139): warning C4716: 'comment': must return a value
   CLexer.vcxproj -> C:\Users\Andrei\source\repos\CLexer\Debug\CLexer.exe

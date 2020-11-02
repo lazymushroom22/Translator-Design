@@ -147,6 +147,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="c.lex" />
+    <None Include="c.y" />
     <None Include="input.csrc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

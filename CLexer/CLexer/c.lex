@@ -7,7 +7,7 @@ IS			(u|U|l|L)*
 
 %{
 #include <stdio.h>
-#include "globals.h"
+#include "c.tab.h"
 
 void count();
 %}
@@ -106,6 +106,7 @@ L?\"(\\.|[^\\"])*\"	{ count(); return(STRING_LITERAL); }
 ">"			{ count(); return(GREATER); }
 "^"			{ count(); return(XOR); }
 "|"			{ count(); return(OR); }
+"?"			{ count(); return(COND_OP); }
 
 
 [ \t\v\n\f]		{ count(); }

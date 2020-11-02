@@ -85,7 +85,10 @@ const char* lexUnits[] = {
 							"LESSER",
 							"GREATER",
 							"XOR",
-							"OR" };
+							"OR",
+							"IDENTIFIER",
+							"TYPE_NAME",
+							"COND_OP"};
 
 int main()
 {
@@ -101,7 +104,7 @@ int main()
 	}
 	else
 	{
-		printf("The input file could not be opened. Error: %d", errno);
+		printf("Fisierul de input nu poate fi deschis. Eroare: %d", errno);
 	}
 
 
