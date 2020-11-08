@@ -21,9 +21,15 @@
     <ClCompile Include="lex.yy.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="c.tab.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="globals.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="c.tab.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

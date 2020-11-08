@@ -1,1 +1,5 @@
-float
+int ab = 120;
+int abcd (int a){
+	int ab;
+	if(ab>3){}
+}

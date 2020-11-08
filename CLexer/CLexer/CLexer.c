@@ -5,6 +5,7 @@
 #include <errno.h>
 extern FILE* yyin;
 extern int yylex(void);
+extern int yydebug;
 const char* lexUnits[] = {
 
 							"AUTO",
@@ -90,22 +91,50 @@ const char* lexUnits[] = {
 							"TYPE_NAME",
 							"COND_OP"};
 
-int main()
-{
-	int tokenValue = 0;
-	yyin = fopen("input.csrc", "rt");
+							int main()
+							{
+								/* int tokenValue = 0;
+								yyin = fopen("input.csrc", "rt");
 
-	if (yyin != NULL)
-	{
-		while ((tokenValue = yylex()) != 0)
-		{
-			printf(" -> TOKEN ID: %d; TOKEN VALUE %s", tokenValue, lexUnits[tokenValue]);
-		}
-	}
-	else
-	{
-		printf("Fisierul de input nu poate fi deschis. Eroare: %d", errno);
-	}
+								if (yyin != NULL)
+								{
+									while ((tokenValue = yylex()) != 0)
+									{
+										printf(" -> TOKEN ID: %d; TOKEN VALUE %s", tokenValue, lexUnits[tokenValue]);
+									}
+								}
+								else
+								{
+									printf("Fisierul de input nu poate fi deschis. Eroare: %d", errno);
+								}
 
+								*/
+								yydebug = 1;
+								yyin = fopen("input.csrc", "rt");
+								if (yyin != NULL)
+								{
+									int result = yyparse();
+									switch (result)
+									{
+									case 0:
+										printf("Parse successful. \n");
+										break;
 
-}
+									case 1:
+										printf("Invalid input encountered. \n");
+										break;
+
+									case 2:
+										printf("Out of memory. \n");
+										break;
+
+									default:
+										break;
+									}
+									fclose(yyin);
+								}
+								else
+								{
+									printf("Fisierul de input nu poate fi deschis. Eroare: %d", errno);
+								}	
+							}
